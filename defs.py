@@ -30,10 +30,6 @@ def cifra_cesar_decode(texto: str, chave: int) -> str:
         else:
             resultado += letra
     return resultado
-from flask import Flask, render_template, request, flash
-from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, SubmitField
-from wtforms.validators import DataRequired, NumberRange
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecretkey'
