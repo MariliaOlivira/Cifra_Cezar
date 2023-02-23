@@ -1,4 +1,8 @@
 import string
+from flask import Flask, render_template, request, flash
+from flask_wtf import FlaskForm
+from wtforms import StringField, IntegerField, SubmitField
+from wtforms.validators import DataRequired, NumberRange
 
 alfa = list(string.ascii_lowercase)
 export = []
