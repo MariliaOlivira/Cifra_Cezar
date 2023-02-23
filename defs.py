@@ -9,3 +9,24 @@ def cezar_recursivo():
     print(dict)
 
 cezar_recursivo()
+
+def cifra_cesar_encode(texto: str, chave: int) -> str:
+    resultado = ""
+    for letra in texto:
+        if letra.isalpha():
+            indice = (ord(letra) - 97 + chave) % 26
+            resultado += chr(indice + 97)
+        else:
+            resultado += letra
+    return resultado
+
+
+def cifra_cesar_decode(texto: str, chave: int) -> str:
+    resultado = ""
+    for letra in texto:
+        if letra.isalpha():
+            indice = (ord(letra) - 97 - chave) % 26
+            resultado += chr(indice + 97)
+        else:
+            resultado += letra
+    return resultado
