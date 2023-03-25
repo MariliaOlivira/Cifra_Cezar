@@ -5,6 +5,7 @@ from wtforms import StringField, IntegerField, SubmitField
 from wtforms.validators import DataRequired, NumberRange
 import selenium
 
+print("my part")
 alfa = list(string.ascii_lowercase)
 export = []
 count = 0
